@@ -1,0 +1,11 @@
+services:
+  weather-app:
+    build: .
+    image: weather-analyzer
+    volumes:
+      - ./data:/app/output
+    environment:
+      # Я вставив токен 
+      - TELEGRAM_TOKEN=8502215382:AAEW3CPGP2uTygBzqCT2T2NTryZ3jZ_oQcQ
+      #  CHAT ID 
+      - TELEGRAM_CHAT_ID=@KyivWeatherDaily
